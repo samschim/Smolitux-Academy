@@ -1,8 +1,9 @@
-# Academy
+# Smolitux Academy
 Online Kurse
 
 #Academy #SmoliTrade
-# Smolitux Academy
+___
+
 Die Smolitux Academy konzentriert sich auf die Lerninhalt der Einführung in die Open Source Welt und Schulungen in den Bereichen:
 - Linux - klassische System Administration
 - AI - Generell:Explanation, Nutzung:Using-AI-technology, Host-AI:Local/Cloud
