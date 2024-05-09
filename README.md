@@ -13,6 +13,12 @@ ___
 
 Hier werden alle Dateien zu den Folgenden Online Kursen geteilt:
 
+- TradingBot - automate your trading workflows
+- Smolitux - AI experience, open source and user friendly
+- Linux - klassische System Administration
+- SmolitAssistant -  AI powered working solution
+
+
 
 
 ## TradingBot - automate your trading workflows
