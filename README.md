@@ -18,7 +18,7 @@ Hier werden alle Dateien zu den Folgenden Online Kursen geteilt:
 - **Linux - klassische System Administration**
 - **SmolitAssistant -  AI powered working solution**
 
-
+___
 
 
 ## TradingBot - automate your trading workflows
