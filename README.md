@@ -14,7 +14,7 @@ ___
 Hier werden alle Dateien zu den Folgenden Online Kursen geteilt:
 
 - **TradingBot - automate your trading workflows**
-- **Smolitux - AI experience, open source and user friendly**
+- **SmolituxOS - AI experience, open source and user friendly**
 - **Linux - klassische System Administration**
 - **SmolitAssistant -  AI powered working solution**
 
@@ -66,7 +66,7 @@ Zudem wird nach Ausarbeitung einer Strategie passend für das eigene Portfolio ,
 ___
 
 ___
-### Smolitux - AI experience, open source and user friendly
+### SmolituxOS - AI experience, open source and user friendly
 In diesem Kurs wird die Nutzung von AI Technologien erklärt. Dabei wird das Linux Betriebssystem Smolitux vorgestellt. SmolituxOS ist ein mit AI Tools konfiguriertes und automatisiertes, sicheres, User freundliches Betriebssystem. Themen in diesem Kurs werden sein (mit SmolituxOS und Ubuntu): 
 - Einführung in die Nutzung von Linux - GUI & Terminal
 - Systemadministration mit AI
