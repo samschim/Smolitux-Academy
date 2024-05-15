@@ -23,6 +23,8 @@ Hier werden alle Dateien zu den Folgenden Online Kursen geteilt:
 - **SmolitAssistant -  AI powered working solution**
 
 ___
+https://discord.gg/SvnBbd3q
+___
 
 ## Online Kurse:
 
