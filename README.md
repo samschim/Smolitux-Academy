@@ -3,6 +3,8 @@ Online Kurse
 
 #Academy #SmoliTrade
 ___
+https://app.dework.xyz/i/1sn76twc3B8WFp407WTgth
+___
 
 Die Smolitux Academy konzentriert sich auf die Lerninhalt der Einführung in die Open Source Welt und Schulungen in den Bereichen:
 - Linux - klassische System Administration
