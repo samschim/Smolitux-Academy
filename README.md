@@ -10,17 +10,17 @@ ___
 
 Die Smolitux Academy konzentriert sich auf die Lerninhalt der Einführung in die Open Source Welt und Schulungen in den Bereichen:
 - Linux - klassische System Administration
-- AI - Generell:Explanation, Nutzung:Using-AI-technology, Host-AI:Local/Cloud
-- Crypto - Generell,Trading,AI-integration
+- AI - Generell:Erklärung, Tools Nutzung:Einsatz von AI-Technologie, Host-AI:Lokal/Cloud
+- Krypto - Generell,Handel,KI-Integration
 
 ___
 
 Hier werden alle Dateien zu den Folgenden Online Kursen geteilt:
 
-- **TradingBot - automatisieren Sie Ihre Handelsabläufe**
-- **SmolituxOS - KI-Erfahrung, Open Source und benutzerfreundlich**
+- **TradingBot – Effiziente Automatisierung Ihrer Trading-Prozesse**
+- **SmolituxOS - KI-Anwendungen, Open Source und benutzerfreundlich**
 - **Linux - klassische Systemverwaltung**
-- **SmolitAssistant - KI-gestützte Arbeitslösung**
+- **SmolitAssistant – Intelligente Lösung mit künstlicher Intelligenz für produktives und optimiertes Arbeiten.**
 
 ___
 https://discord.gg/SvnBbd3q
@@ -28,7 +28,7 @@ ___
 
 ## Online Kurse:
 
-### TradingBot - automate your trading workflows
+### TradingBot – Effiziente Automatisierung Ihrer Trading-Prozesse
 In diesem Kurs werden Techniken und Tools des KI gesteuerten Algo-Trading vorgestellt, sowie der Umgang mit diesen geschult. 
 Zudem wird nach Ausarbeitung einer Strategie passend für das eigene Portfolio , ein eigener KI gesteuerter Bot-Schwarm installiert und konfiguriert.
 
@@ -41,6 +41,7 @@ Zudem wird nach Ausarbeitung einer Strategie passend für das eigene Portfolio ,
 - Tools
 	- OctoBot
 	- Freqtrade
+ 	- SuperAlgos 
 	- SmoliTrade
 - Strategy
 	- Portfolio analysieren
@@ -67,12 +68,13 @@ Zudem wird nach Ausarbeitung einer Strategie passend für das eigene Portfolio ,
 			- Datenbanken einrichten
 			- Freqtrade konfigurieren
 			- OctoBot konfigurieren
+   			- SuperAlgos konfigurieren
 			- SmoliTrade konfigurieren
 
 ___
 
 ___
-### SmolituxOS - AI experience, open source and user friendly
+### SmolituxOS - KI-Anwendungen, Open Source und benutzerfreundlich
 In diesem Kurs wird die Nutzung von AI Technologien erklärt. Dabei wird das Linux Betriebssystem Smolitux vorgestellt. SmolituxOS ist ein mit AI Tools konfiguriertes und automatisiertes, sicheres, User freundliches Betriebssystem. Themen in diesem Kurs werden sein (mit SmolituxOS und Ubuntu): 
 - Einführung in die Nutzung von Linux - GUI & Terminal
 - Systemadministration mit AI
@@ -94,7 +96,7 @@ In diesem Kurs geht es klassische Linux System Administration. Es werden alle Th
 ...
 
 ___
-### SmolitAssistant -  AI powered working solution
+### SmolitAssistant – Intelligente Lösung mit künstlicher Intelligenz für produktives und optimiertes Arbeiten
 In diesem Kurs werden moderne Einsatzmöglichkeiten von AI Tools besprochen und der Umgang mit diesen geschult. Dies geschieht anhand des Software Tools Smolit-Assistant und dem Einsatz unterschiedlicher Hardware Tools.
 Es werden mehrere unterschiedliche Assistenten vorgestellt:
 - Smolit-Assistant
