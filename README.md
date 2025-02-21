@@ -17,10 +17,10 @@ ___
 
 Hier werden alle Dateien zu den Folgenden Online Kursen geteilt:
 
-- **TradingBot - automate your trading workflows**
-- **SmolituxOS - AI experience, open source and user friendly**
-- **Linux - klassische System Administration**
-- **SmolitAssistant -  AI powered working solution**
+- **TradingBot - automatisieren Sie Ihre Handelsabläufe**
+- **SmolituxOS - KI-Erfahrung, Open Source und benutzerfreundlich**
+- **Linux - klassische Systemverwaltung**
+- **SmolitAssistant - KI-gestützte Arbeitslösung**
 
 ___
 https://discord.gg/SvnBbd3q
