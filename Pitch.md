@@ -13,6 +13,7 @@ In einer zunehmend digitalisierten Welt ist es essenziell, mit den neuesten Tech
 
 Zeitplan:
 
+    Phase 1
     Monat 1-2: Kursentwicklung und Inhaltsplanung
         Identifizierung relevanter Themen und Erstellung von Kursplänen.
         Zusammenstellung eines Expertenteams für die Inhaltserstellung.
@@ -21,6 +22,7 @@ Zeitplan:
         Erstellung von Video-Tutorials, schriftlichen Anleitungen und interaktiven Übungen.
         Entwicklung von Quizzen und Assessments zur Wissensüberprüfung.
 
+    Phase 2
     Monat 5: Plattformentwicklung und Integration
         Aufbau der Online-Lernplattform mit benutzerfreundlicher Oberfläche.
         Integration von Diskussionsforen und Support-Tools für Teilnehmer.
@@ -29,6 +31,7 @@ Zeitplan:
         Durchführung von Beta-Tests mit ausgewählten Nutzern.
         Sammlung und Auswertung von Feedback zur Optimierung der Inhalte und der Plattform.
 
+    Phase 3
     Monat 7: Offizieller Launch der Smolitux Academy
         Veröffentlichung der ersten Kursreihe und Öffnung der Plattform für die breite Öffentlichkeit.
         Start von Marketingkampagnen zur Bekanntmachung des Angebots.
