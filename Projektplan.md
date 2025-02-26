@@ -3,14 +3,14 @@
 ## **🚀 1. Projektziele & Umfang**
 
 ### **🔹 Projektziele*
-Die Smolitux Academy ist eine **dezentrale, blockchain-basierte Lernplattform**, d:
+Die Smolitux Academy ist eine **dezentrale, blockchain-basierte Lernplattform**, die:
 - **Zentral von EcoSphereNetwork gehostet** wird, um Skalierbarkeit und Verfügbarkeit sicherzustellen.
 - **Eine Marktplatz-Struktur** für kostenfreie und kostenpflichtige Kurse bietet.
 - **Blockchain-Zahlungen und NFT-Zertifikate** zur transparenten Monetarisierung ermöglicht.
 - **Optionale Self-Hosting-Möglichkeiten** für spezielle Anwendungsfälle wie Offline-Nutzung oder private Instanzen bereitstellt.
 
 ### **🔹 Projektumfan**
-Das Projekt ist in drei Entwicklungsphasen untertet:
+**Das Projekt ist in drei Entwicklungsphasen unterteilt:**
 1. **Phase 1:** Entwicklung der Kernfunktionen (Kursverwaltung, Zahlungssystem, Zertifikate, Web3-Login).
 2. **Phase 2:** Erweiterung um Community-Features, tokenisiertes Lernen und Analytik.
 3. **Phase 3:** Optimierung, Skalierung, Sicherheitsverbesserungen und öffentliche Einführung.
