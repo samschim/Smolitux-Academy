@@ -35,7 +35,7 @@
 
 ## 🎯 About
 **Smolitux Academy** is an open-source, blockchain-integrated **learning platform** that allows users to create, sell, and participate in online courses.  
-It is **hosted by EcoSphereNetwork**, providing a **scalable, cloud-native infrastructure** similar to **Udemy**, but with **decentralized payments and NFT certificates**.
+It is **hosted by EcoSphereNetwork**, providing a **scalable, cloud-native infrastructure**, with **decentralized payments and NFT certificates**.
 
 ### **🔹 Why Smolitux Academy?**
 - 🚀 **Fully Hosted by EcoSphereNetwork** – No need to manage your own servers.  
