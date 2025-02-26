@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/static/img/logo.png" alt="Logo" width="200">
   <h1>Smolitux Academy</h1>
-  <p>A decentralized learning platform combining the best of Moodle and Udemy with Blockchain integration.</p>
+  <p>A decentralized, blockchain-powered learning platform hosted by EcoSphereNetwork.</p>
 
   [![Contributors][contributors-shield]][contributors-url]
   [![Stars][stars-shield]][stars-url]
@@ -17,6 +17,8 @@
   [Request Feature](https://github.com/EcoSphereNetwork/Smolitux-Academy/issues)
 </div>
 
+---
+
 ## 📋 Table of Contents
 - [About](#-about)
 - [Key Features](#-key-features)
@@ -29,42 +31,55 @@
 - [Support](#-support)
 - [License](#-license)
 
-## 🎯 About
-**Smolitux Academy** is an open-source, decentralized e-learning platform built on **Moodle** with **Blockchain integration**. It allows anyone to create and sell courses, offering a **self-hosted** or **cloud-based** deployment.
+---
 
-### Why Use Smolitux Academy?
-- 🚀 **Decentralized Learning**: No central authority—run it on your own hardware or cloud.  
-- 💰 **Blockchain Monetization**: Course creators can charge in **ESN_Token** or offer free content.  
-- 🎓 **NFT Certificates**: Learners earn blockchain-verified certificates as **NFTs**.  
-- 🏆 **Tokenized Learning**: Reward users for completing courses & engaging in the community.  
-- 🔄 **Flexible Deployment**: Host locally (MoodleBox/Raspberry Pi) or scale in the cloud.  
+## 🎯 About
+**Smolitux Academy** is an open-source, blockchain-integrated **learning platform** that allows users to create, sell, and participate in online courses.  
+It is **hosted by EcoSphereNetwork**, providing a **scalable, cloud-native infrastructure** similar to **Udemy**, but with **decentralized payments and NFT certificates**.
+
+### **🔹 Why Smolitux Academy?**
+- 🚀 **Fully Hosted by EcoSphereNetwork** – No need to manage your own servers.  
+- 💰 **Blockchain-Powered Payments** – Courses can be monetized via **ESN_Token, ETH, MATIC, or Fiat**.  
+- 🎓 **NFT Certificates** – Learners earn **blockchain-verified NFTs** as proof of course completion.  
+- 🏆 **Tokenized Learning** – Users are rewarded for engagement and course completions.  
+- 🔄 **Self-Hosting Option (Advanced Feature)** – For users who want to run a local version.
 
 ---
 
 ## ✨ Key Features
 
 ### 🔹 Core Features
-- **Decentralized Course Marketplace** – Anyone can create & sell courses.
-- **Flexible Pricing** – Free or paid courses using **Smart Contracts**.
-- **NFT-Based Certificates** – Fälschungssichere Abschlussnachweise.
-- **Tokenized Learning** – Earn rewards for completing courses.
-- **Decentralized Storage** – Course content can be stored on **IPFS**.
+- **Global Course Marketplace** – Users can create and sell courses on a decentralized platform.
+- **Blockchain Payments** – Secure and instant transactions using **Smart Contracts**.
+- **NFT Certificates** – Immutable, verifiable proof of learning on the blockchain.
+- **Reward System** – Earn **ESN_Token** for learning and engagement.
+- **Scalable & Secure** – Hosted in the **cloud with Kubernetes & Docker**.
 
-### 🔹 Development Tools
-- **Smart Contracts** – Solidity-based ERC-20 (payments) & ERC-721 (certificates).
-- **Web3 Integration** – Wallet authentication via MetaMask / WalletConnect.
-- **Docker Support** – Fully containerized for flexible deployment.
-- **Testing Framework** – Unit & integration tests for blockchain transactions.
+### 🔹 Optional Self-Hosting Features
+- **Docker Deployment** – Run Smolitux Academy on your own server or Raspberry Pi.
+- **Offline Mode (MoodleBox-style)** – Local hosting with sync when online.
+- **Custom Smart Contracts** – Integrate your own blockchain logic.
 
 ---
 
 ## 🚀 Getting Started
 
+### **Accessing the Hosted Version**
+The **official Smolitux Academy instance is hosted by EcoSphereNetwork** and can be accessed at:  
+🌎 **[https://academy.ecospherelabs.com](https://academy.ecospherelabs.com)**  
+
+**Sign Up Today** and start creating or joining courses!
+
+---
+
+### **Self-Hosting (Advanced Users)**
+🔹 **For those who want to host their own Smolitux Academy instance**, follow these steps:
+
 ### **Prerequisites**
 - Docker & Docker-Compose  
 - Node.js & npm  
-- PostgreSQL or SQLite (for local deployment)  
-- MetaMask or WalletConnect (for blockchain transactions)  
+- PostgreSQL (for local DB)  
+- MetaMask or WalletConnect (for Web3 payments)  
 
 ### **Installation**
 1. **Clone the repository**
@@ -72,18 +87,15 @@
    git clone https://github.com/EcoSphereNetwork/Smolitux-Academy.git
    cd Smolitux-Academy
    ```
-2. **Start local development environment**
+2. **Start local instance**
    ```bash
    docker-compose up -d
    ```
-3. **Set up Smart Contracts**
+3. **Set up Smart Contracts (Optional)**
    ```bash
    cd blockchain
    npm install
    npx hardhat compile
-   ```
-4. **Deploy Smart Contracts to testnet**
-   ```bash
    npx hardhat run scripts/deploy.js --network goerli
    ```
 
@@ -95,8 +107,7 @@ Smolitux-Academy/
 ├── blockchain/              # Smart Contracts (Solidity)
 │   ├── contracts/           # Solidity contracts for payments & NFTs
 │   ├── scripts/             # Deployment & interaction scripts
-│   ├── test/                # Test cases for blockchain logic
-├── docs/                    # Documentation
+│   ├── test/                # Smart contract test cases
 ├── frontend/                # Web UI (React.js)
 │   ├── src/
 │   ├── public/
@@ -105,34 +116,12 @@ Smolitux-Academy/
 │   ├── src/
 │   ├── routes/
 │   ├── database/
+├── docs/                    # Documentation
 ├── tests/                   # End-to-end testing
 ├── docker-compose.yml       # Deployment configuration
 ├── .env.example             # Environment variables
 └── README.md                # Project documentation
 ```
-
----
-
-## 💻 Development
-
-### **Setting Up for Development**
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Compile Smart Contracts:
-   ```bash
-   npx hardhat compile
-   ```
-3. Run local blockchain (for testing)
-   ```bash
-   npx hardhat node
-   ```
-4. Start development server:
-   ```bash
-   cd frontend
-   npm start
-   ```
 
 ---
 
@@ -156,20 +145,16 @@ npx hardhat coverage
 
 ## 🚢 Deployment
 
-### **Deploy to Production**
-1. **Set up a production server (Ubuntu/Debian)**
-   ```bash
-   sudo apt update && sudo apt install docker docker-compose -y
-   ```
-2. **Clone repository**
-   ```bash
-   git clone https://github.com/EcoSphereNetwork/Smolitux-Academy.git
-   cd Smolitux-Academy
-   ```
-3. **Run Docker Compose**
-   ```bash
-   docker-compose up -d
-   ```
+### **How EcoSphereNetwork Hosts Smolitux Academy**
+1. **Cloud Kubernetes Cluster (AWS EKS / GCP GKE)**
+2. **CI/CD Pipeline with GitHub Actions**
+3. **Database & Storage: PostgreSQL (AWS RDS) + S3/IPFS**
+4. **Load Balancing & Scaling with Nginx & Cloudflare**
+
+### **Self-Hosting Deployment**
+1. Install Docker & Kubernetes  
+2. Clone the repository & configure `.env`  
+3. Deploy with `docker-compose up -d` or `kubectl apply -f k8s/`
 
 ---
 
