@@ -1,8 +1,3 @@
-Hier ist ein **detaillierter Projektplan** für die Entwicklung der **Smolitux Academy**, basierend auf einem **Fork von Moodle/MoodleBox**.  
-Ich gehe davon aus, dass Moodle als Basis genutzt und mit **Blockchain, Smart Contracts und einer dezentralen Architektur erweitert** wird.
-
----
-
 # **📋 Smolitux Academy – Detaillierter Projektplan**
 ### **🔹 Entwicklungsgrundlage: Moodle/MoodleBox**
 - Moodle ist ein **Open-Source-LMS** mit modularer Architektur.
@@ -155,6 +150,3 @@ Ich gehe davon aus, dass Moodle als Basis genutzt und mit **Blockchain, Smart Co
 | **📅 Gesamt:** | **~8-9 Monate** |
 
 ---
-
-
-
