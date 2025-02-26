@@ -1,9 +1,47 @@
-## **🔹 Technischer Plan für dezentrale Hosting-Optionen in Smolitux Academy**
-Da Smolitux Academy sowohl **lokal als auch in der Cloud** gehostet werden soll, müssen wir eine hybride Architektur schaffen. Diese erlaubt es Nutzern, die Plattform entweder auf **eigenen Servern (z. B. Raspberry Pi, VPS) oder in der Cloud** zu betreiben.
+
+# **🌍 Smolitux Academy – Optionale Self-Hosting Möglichkeit**
+
+🚀 **Smolitux Academy wird zentral von EcoSphereNetwork gehostet**.  
+📌 **Die meisten Nutzer brauchen kein eigenes Hosting – einfach anmelden & loslegen!**  
+
+Diese Anleitung richtet sich an **fortgeschrittene Nutzer**, die eine eigene Smolitux Academy-Instanz betreiben möchten.  
+🌟 **Self-Hosting ist eine Zusatzoption, nicht die empfohlene Standardmethode.**  
+
+🔗 **Zugriff auf die offizielle Plattform:**  
+🌎 **[https://academy.ecospherelabs.com](https://academy.ecospherelabs.com)**  
 
 ---
 
-## **🔹 1️⃣ Architektur-Überblick**
+## **📌 Wann macht Self-Hosting Sinn?**
+✅ **Bildungseinrichtungen & Unternehmen**, die eine private Instanz betreiben möchten  
+✅ **Offline-Nutzung** für Schulen oder Organisationen ohne stabile Internetverbindung  
+✅ **Forschungsteams & Entwickler**, die eigene Features oder Blockchain-Integrationen testen möchten  
+✅ **Anbieter, die volle Kontrolle über Daten & Hosting behalten wollen**  
+
+🚫 **Für die meisten Nutzer ist Self-Hosting nicht erforderlich!**  
+📌 **Nutze stattdessen die zentrale Smolitux Academy Plattform.**  
+
+---
+
+## **📦 Self-Hosting-Technologie & Infrastruktur**
+Self-Hosting erfordert eine eigene Server-Infrastruktur oder einen lokalen Rechner.  
+**Unterstützte Umgebungen:**
+- **Lokaler Server oder dedizierte Hardware** (z. B. Linux-Server, Raspberry Pi)
+- **Virtuelle Maschinen oder VPS** (z. B. Proxmox, Hetzner, DigitalOcean)
+- **Kubernetes Cluster auf eigenen Servern** (keine externe Cloud-Dienste)
+- **Dezentrale Speicherung mit IPFS** (optional)
+
+📌 **Empfohlene Mindestanforderungen:**
+| **Komponente** | **Mindestanforderung** |
+|--------------|-----------------|
+| **CPU** | 4 vCPUs |
+| **RAM** | 8 GB |
+| **Speicher** | 100 GB SSD |
+| **Betriebssystem** | Ubuntu 22.04 / Debian 11 |
+| **Netzwerk** | Statischer IP-Zugang für öffentliche Instanzen |
+
+---
+## **🔹Architektur-Überblick**
 Smolitux Academy wird als **modulare, containerisierte Plattform** entwickelt, sodass sie flexibel auf verschiedenen Hosting-Optionen laufen kann:
 
 | **Hosting-Option** | **Technologie** | **Zielgruppe** |
@@ -12,104 +50,47 @@ Smolitux Academy wird als **modulare, containerisierte Plattform** entwickelt, s
 | **VPS (Virtual Private Server)** | Docker + PostgreSQL | Kleine bis mittelgroße Lernplattformen |
 | **Cloud (AWS, DigitalOcean, GCP)** | Kubernetes + Load Balancer | Große öffentliche Instanzen |
 | **Dezentrale Speicherung** | IPFS + Filecoin | Nutzer können Daten dezentral speichern |
-
 ---
 
-## **🔹 2️⃣ Hosting-Optionen & Anpassungen**
-### **🖥️ Option A: Lokales Hosting (Raspberry Pi / MoodleBox)**
-✅ **Warum?**  
-- Ermöglicht **Offline-Lernen**, ideal für Schulen & Organisationen ohne stabile Internetverbindung.  
-- Erfordert **geringe Hardware-Ressourcen**.  
+## **🚀 Installation & Einrichtung**
 
-✅ **Technische Anpassungen:**  
-- MoodleBox-Fork mit zusätzlichen **Docker-Containern für Blockchain-Integration**.  
-- **Datenbank-Speicherung auf lokalem PostgreSQL / SQLite**.  
-- **Lokaler IPFS-Knoten**, um Dateien ohne Cloud zu speichern.  
+### **1️⃣ Voraussetzungen**
+- **Linux-Server oder VPS**
+- **Docker & Docker-Compose**
+- **PostgreSQL (oder SQLite für kleine Instanzen)**
+- **IPFS für dezentrale Speicherung (optional)**
 
-✅ **Setup:**  
-1. **Betriebssystem vorbereiten**  
-   ```bash
-   sudo apt update && sudo apt upgrade -y
-   ```
-2. **Docker installieren**  
-   ```bash
-   curl -fsSL https://get.docker.com -o get-docker.sh
-   sudo sh get-docker.sh
-   ```
-3. **Smolitux Academy installieren**  
+### **2️⃣ Installation**
+1. **Repository klonen:**
    ```bash
    git clone https://github.com/EcoSphereNetwork/Smolitux-Academy.git
    cd Smolitux-Academy
-   docker-compose up -d
    ```
 
----
-
-### **🌍 Option B: VPS (Virtual Private Server, z. B. DigitalOcean, Hetzner)**
-✅ **Warum?**  
-- Einfache Wartung für **kleine & mittlere Anbieter**.  
-- Erlaubt **globale Nutzung**, ohne auf große Cloud-Dienste angewiesen zu sein.  
-
-✅ **Technische Anpassungen:**  
-- Nutzung eines **Docker-Compose-Stacks für Moodle, Blockchain & IPFS**.  
-- **Reverse Proxy mit Nginx** für HTTPS-Zugriff.  
-
-✅ **Setup:**  
-1. **Server aufsetzen (Ubuntu 22.04 empfohlen)**  
-   ```bash
-   sudo apt update && sudo apt install docker docker-compose -y
-   ```
-2. **Docker-Compose Datei für Smolitux Academy erstellen**
-   ```yaml
-   version: '3'
-
-   services:
-     smolitux:
-       image: moodle
-       ports:
-         - "8080:80"
-       volumes:
-         - moodle_data:/var/www/html
-       environment:
-         - MOODLE_DB_HOST=postgres
-         - MOODLE_DB_USER=admin
-         - MOODLE_DB_PASSWORD=secret
-
-     postgres:
-       image: postgres
-       environment:
-         POSTGRES_USER: admin
-         POSTGRES_PASSWORD: secret
-       volumes:
-         - db_data:/var/lib/postgresql/data
-
-   volumes:
-     moodle_data:
-     db_data:
-   ```
-3. **Deployment starten**  
+2. **Docker-Umgebung starten:**
    ```bash
    docker-compose up -d
    ```
 
+3. **Datenbank konfigurieren:**  
+   Bearbeite die `.env`-Datei, um PostgreSQL oder SQLite zu nutzen.
+
+4. **Zugriff auf die lokale Instanz:**  
+   - Öffne `http://localhost:8080` im Browser  
+   - Logge dich mit dem Standard-Admin-Account ein  
+
 ---
 
-### **☁️ Option C: Cloud (AWS, GCP, Azure)**
-✅ **Warum?**  
-- **Skalierbare Lösung** für große Anbieter.  
-- **Automatische Skalierung & Load Balancing** möglich.  
+## **🌐 Kubernetes-Deployment auf eigenen Servern**
+📌 **Für größere Instanzen mit automatischer Skalierung empfehlen wir Kubernetes.**
 
-✅ **Technische Anpassungen:**  
-- Nutzung von **Kubernetes** für Skalierbarkeit.  
-- **Cloud Storage** für Kursdateien (z. B. S3, Google Cloud Storage).  
-- **Automatische Skalierung mit Load Balancer**.  
-
-✅ **Setup:**  
-1. **Kubernetes Cluster aufsetzen (AWS EKS, GCP GKE, Azure AKS)**  
+### **1️⃣ Kubernetes Cluster aufsetzen**
+1. **Erstelle einen Kubernetes Cluster auf eigenen Servern (Ubuntu 22.04):**
    ```bash
-   eksctl create cluster --name smolitux-academy
+   kubeadm init --pod-network-cidr=10.244.0.0/16
    ```
-2. **Deployment von Moodle & Blockchain-Integration**  
+
+2. **Deployment mit Kubernetes YAML-Datei:**
    ```yaml
    apiVersion: apps/v1
    kind: Deployment
@@ -127,56 +108,74 @@ Smolitux Academy wird als **modulare, containerisierte Plattform** entwickelt, s
        spec:
          containers:
          - name: moodle
-           image: moodle
+           image: smolitux-academy
            ports:
-           - containerPort: 80
+           - containerPort: 8080
+   ```
+
+3. **Deployment starten:**
+   ```bash
+   kubectl apply -f smolitux-deployment.yaml
+   ```
+
+📌 **Mehr Details zur Kubernetes-Installation in der Dokumentation.**  
+
+---
+
+## **📂 Dezentrale Speicherung mit IPFS**
+📌 **Optional kannst du Kursinhalte dezentral mit IPFS speichern.**  
+
+### **1️⃣ IPFS installieren**
+```bash
+wget https://dist.ipfs.io/go-ipfs/latest/go-ipfs.tar.gz
+tar -xvzf go-ipfs.tar.gz
+cd go-ipfs
+sudo ./install.sh
+```
+
+### **2️⃣ Kursmaterialien auf IPFS speichern**
+```bash
+echo "Lernmaterial von Smolitux Academy" > kursbeschreibung.txt
+ipfs add kursbeschreibung.txt
+```
+
+### **3️⃣ Datei abrufen**
+```bash
+ipfs cat <hash>
+```
+
+📌 **Standardmäßig speichert Smolitux Academy Inhalte auf internen Servern. IPFS ist eine Zusatzoption.**  
+
+---
+
+## **🔧 Self-Hosting: Wartung & Updates**
+1️⃣ **Updates erhalten:**  
+   ```bash
+   git pull origin main
+   docker-compose down && docker-compose up -d
+   ```
+
+2️⃣ **Logs überprüfen:**  
+   ```bash
+   docker logs -f smolitux-backend
+   ```
+
+3️⃣ **Backup erstellen:**  
+   ```bash
+   pg_dump -U admin -h localhost smolitux_db > backup.sql
    ```
 
 ---
 
-### **📂 Option D: Dezentrale Speicherung mit IPFS**
-✅ **Warum?**  
-- **Verhindert zentrale Kontrolle über Daten**.  
-- Erlaubt **dezentrale Speicherung von Kursinhalten**.  
+## **🚀 Fazit & Empfehlung**
+✅ **Nutze die zentrale Plattform von EcoSphereNetwork für maximale Performance & Sicherheit.**  
+✅ **Self-Hosting ist nur für spezifische Anwendungsfälle gedacht.**  
+✅ **Eigene Server & keine externe Cloud-Abhängigkeit!**  
 
-✅ **Technische Anpassungen:**  
-- **Integration von IPFS für Dateispeicherung**.  
-- Moodle speichert Kursdateien direkt in einem **IPFS-Knoten**.  
+📌 **Zentrale Plattform:**  
+🌎 **[https://academy.ecospherelabs.com](https://academy.ecospherelabs.com)**  
 
-✅ **Setup:**  
-1. **IPFS installieren**  
-   ```bash
-   wget https://dist.ipfs.io/go-ipfs/latest/go-ipfs.tar.gz
-   tar -xvzf go-ipfs.tar.gz
-   cd go-ipfs
-   sudo ./install.sh
-   ```
-2. **Starten & Datei hochladen**  
-   ```bash
-   ipfs init
-   ipfs daemon &
-   echo "Hallo Smolitux Academy" > kursbeschreibung.txt
-   ipfs add kursbeschreibung.txt
-   ```
-3. **Datei über IPFS abrufen**  
-   ```bash
-   ipfs cat <hash>
-   ```
+📌 **Fragen oder Unterstützung?**  
+💬 **[Support & Diskussionen](https://github.com/EcoSphereNetwork/Smolitux-Academy/discussions)**  
 
 ---
-
-## **🔹 3️⃣ Vergleich der Hosting-Optionen**
-| **Option** | **Vorteile** | **Nachteile** |
-|------------|------------|------------|
-| **Lokal (Raspberry Pi, MoodleBox)** | Offline-Funktion, keine Cloud-Abhängigkeit | Geringe Rechenleistung, weniger Skalierbarkeit |
-| **VPS (DigitalOcean, Hetzner, Linode)** | Leicht zu verwalten, flexibel | Manuelle Wartung erforderlich |
-| **Cloud (AWS, GCP, Azure)** | Skalierbar, automatische Updates | Höhere Kosten, Abhängigkeit von Cloud-Anbietern |
-| **Dezentral (IPFS, Filecoin)** | Kein zentraler Server nötig, zensurresistent | Langsamere Performance, Komplexität |
-
----
-
-## **🚀 Nächste Schritte & Umsetzung**
-✅ **Entwicklung eines Docker-Images für Smolitux Academy**  
-✅ **Testen der Blockchain-Integration in einer dezentralen Umgebung**  
-✅ **Erstellung einer IPFS-Schnittstelle für Moodle**  
-
