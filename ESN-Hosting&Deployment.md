@@ -1,74 +1,82 @@
-### **🌍 Smolitux Academy – Technischer Plan für Hosting & Deployment durch EcoSphereNetwork**  
-Da **EcoSphereNetwork** die **Smolitux Academy** zentral hosten und für alle Nutzer zugänglich machen wird, aber trotzdem eine **Self-Hosting-Option** als Zusatzfeature bieten möchte,
-müssen wir eine **skalierbare, sichere und hochverfügbare Architektur** entwickeln.
+# **🌍 Smolitux Academy – Hosting & Deployment durch EcoSphereNetwork**
+
+**Smolitux Academy** wird **zentral von EcoSphereNetwork** gehostet, um eine **skalierbare, sichere und hochverfügbare Lernplattform** bereitzustellen.  
+Nutzer können sich einfach registrieren und sofort mit dem Lernen oder Erstellen von Kursen beginnen.  
+
+🛠 **Self-Hosting ist eine optionale Zusatzfunktion** für spezielle Anwendungsfälle wie Offline-Lernen oder private Instanzen.  
+Der **reguläre Zugang erfolgt über die zentrale Plattform** von EcoSphereNetwork.  
+
+🔗 **Zugriff auf die offizielle Plattform:**  
+🌎 **[https://academy.ecospherelabs.com](https://academy.ecospherelabs.com)**  
 
 ---
 
-## **🚀 Architekturübersicht**
-Smolitux Academy wird als **Cloud-native Plattform** mit **Docker, Kubernetes und einer Microservices-Architektur** betrieben.  
-Die Plattform wird in einer zentralen Umgebung gehostet, unterstützt aber **dezentrale Zahlungsabwicklung & Zertifikate über die Blockchain**.
+## **📌 Hosting-Strategie von EcoSphereNetwork**
 
-**🔹 Hauptkomponenten:**
-1. **Frontend** (React.js / Vue.js) – Web UI für Nutzer & Kursverwaltung  
-2. **Backend** (Node.js / FastAPI) – API für Kursmanagement, Zahlungen & User-System  
-3. **Datenbank** (PostgreSQL) – Speicherung von Nutzern, Kursen & Transaktionen  
-4. **Blockchain-Schnittstelle** – Smart Contracts für **Zahlungen & NFT-Zertifikate**  
-5. **Storage** (S3/IPFS) – Speicherung von Videos, PDFs & Lernmaterialien  
-6. **Kubernetes (K8s)** – Automatische Skalierung & Load Balancing  
-7. **Self-Hosting-Modul** – Optionales Docker-Setup für eigene Instanzen  
+### **🔹 1. Hauptplattform – Hosting auf eigenen Servern**
+✅ **EcoSphereNetwork hostet die Plattform auf eigenen Servern**  
+✅ **Kein Einsatz von externen Cloud-Diensten (z. B. AWS, Google Cloud)**  
+✅ **Hohe Sicherheit durch eigene Infrastruktur & dezentrale Speicherung**  
+✅ **Automatische Updates, Wartung & Skalierung durch das Team**  
 
----
+📌 **Technologie-Stack für das zentrale Hosting:**  
 
-## **🌐 Infrastruktur & Hosting**
-Da die Plattform **öffentlich verfügbar** sein soll, benötigen wir eine skalierbare **Cloud-Architektur** mit folgenden Komponenten:
+| **Komponente**        | **Technologie**                                         | **Beschreibung** |
+|----------------------|---------------------------------------------------------|-----------------|
+| **Frontend**        | React.js / Vue.js                                       | Moderne, responsive Web-UI für Kursverwaltung und Nutzer-Interaktion |
+| **Backend**         | Node.js (Express) / FastAPI (Python)                    | REST & Web3 API für Kursmanagement, Zahlungen und Nutzerverwaltung |
+| **Datenbank**       | PostgreSQL (gehostet auf eigenen Servern)               | Speicherung von Nutzerdaten, Kursinformationen und Transaktionen |
+| **Dateispeicherung**| **Interne Server + IPFS (optional)**                     | Speicherung von Kursinhalten, Dokumenten und Videos |
+| **Blockchain**      | Ethereum / Polygon / ESN_Token                          | Smart Contracts für Zahlungen & NFT-Zertifikate |
+| **Containerisierung** | Docker                                                 | Modulare Bereitstellung aller Dienste für einfache Skalierung |
+| **Orchestrierung**  | Kubernetes (auf eigenen Servern)                        | Automatische Skalierung, Lastverteilung und Serviceverwaltung |
+| **Load Balancer**   | Nginx + eigener Proxy-Server                            | Verteilung des Traffics auf mehrere Server für hohe Verfügbarkeit |
+| **Authentifizierung** | OAuth 2.0 (Google, MetaMask, WalletConnect)           | Sichere Anmeldung über klassische Logins oder Web3-Wallets |
 
-| **Komponente** | **Technologie** | **Beschreibung** |
-|--------------|-----------------|-----------------|
-| **Frontend (Web-App)** | React.js / Vue.js | Moderne, responsive Web-App |
-| **Backend (API)** | Node.js (Express) / FastAPI | REST & Web3 API für Kurse, User, Blockchain |
-| **Datenbank** | PostgreSQL (AWS RDS) | Speicherung von Nutzern, Kursen, Transaktionen |
-| **Dateispeicherung** | AWS S3 + IPFS | Kursvideos & Dokumente zentral/dezentral speichern |
-| **Blockchain** | Ethereum / Polygon / ESN_Token | Smart Contracts für Zahlungen & NFT-Zertifikate |
-| **Containerisierung** | Docker | Modulare Bereitstellung aller Services |
-| **Orchestrierung** | Kubernetes (K8s) | Automatische Skalierung & Redundanz |
-| **Load Balancer** | Nginx / AWS ALB | Verteilung des Datenverkehrs |
-| **Authentifizierung** | OAuth 2.0 / Web3-Login | Login mit Google, MetaMask oder WalletConnect |
+📌 **Dieser Stack ermöglicht eine **skalierbare, sichere und performante** Architektur, die vollständig auf den eigenen Servern von EcoSphereNetwork gehostet wird.** 🚀
+
+📌 **Ziel:**  
+- **Unabhängigkeit von großen Cloud-Anbietern**  
+- **Eigene Kontrolle über Sicherheit, Skalierung & Datenschutz**  
 
 ---
 
-## **📦 Deployment & Infrastruktur**
-Da die Plattform **hohe Lasten bewältigen** muss, setzen wir auf eine **Cloud-native Architektur mit Kubernetes (K8s)**.
+### **🔹 2. Optionales Self-Hosting**
+🌟 **Nur für spezielle Anwendungsfälle wie:**  
+- **Bildungseinrichtungen oder Unternehmen**, die ihre eigene Instanz betreiben möchten  
+- **Offline-Nutzung**, z. B. in Schulen ohne ständigen Internetzugang  
+- **Entwickler & Forschungsteams**, die individuelle Anpassungen vornehmen möchten  
 
-### **🔷 Cloud Deployment Setup**
-- **Kubernetes Cluster (AWS EKS / GCP GKE / Azure AKS)**
-- **Automatische Skalierung von API-Servern & Datenbank**
-- **Load Balancer für globale Verfügbarkeit**
-- **Dateien werden entweder zentral (AWS S3) oder dezentral (IPFS) gespeichert**
+📌 **Technologie für Self-Hosting:**  
+- **Docker-Container** für lokale Instanzen  
+- **PostgreSQL oder SQLite** als Datenbank  
+- **Unterstützt Raspberry Pi / MoodleBox für Offline-Installationen**  
 
-### **🔷 CI/CD-Pipeline (GitHub Actions)**
-- **Automatische Builds & Tests** nach jedem Push
-- **Automatische Bereitstellung** auf Test- & Produktionsservern
-- **Smart Contract Deployment in Blockchain Testnet/Mainnet**
+💡 **Self-Hosting ist keine Voraussetzung für die Nutzung!**  
+👉 **Mehr Infos:** [Self-Hosting-Anleitung](https://github.com/EcoSphereNetwork/Smolitux-Academy/blob/main/dezentrale-Hosting-Optionen.md)  
 
 ---
 
-## **🛠 Deployment-Workflow**
-1️⃣ **Entwicklung & Testing**  
-- Code wird in **GitHub Repository** gepflegt.  
-- **GitHub Actions** führt automatische Tests aus.  
+## **📦 Deployment-Workflow für das zentrale Hosting**
 
-2️⃣ **Build & Containerisierung**  
-- Code wird als **Docker-Image** verpackt.  
-- Docker-Images werden in **DockerHub oder AWS ECR** gespeichert.  
+**EcoSphereNetwork verwaltet Smolitux Academy mit einer eigenen Server-Infrastruktur:**  
 
-3️⃣ **Deployment auf Kubernetes (K8s)**  
-- Kubernetes lädt die neuesten Container & verteilt sie auf Server.  
-- Ein **Ingress-Controller (Nginx)** leitet Traffic zur App.  
-- **Datenbank (PostgreSQL RDS) & Storage (S3/IPFS) bleiben persistent**.  
+1️⃣ **Code-Entwicklung & Testing**  
+   - Änderungen werden in GitHub gepusht  
+   - GitHub Actions führt Tests & Code-Überprüfungen durch  
 
-4️⃣ **Live-Schaltung & Skalierung**  
-- Nutzer können die Plattform nutzen.  
-- Kubernetes skaliert dynamisch basierend auf der Last.  
+2️⃣ **Automatisches Build & Deployment auf eigene Server**  
+   - Docker-Images werden in unserem internen Repository gespeichert  
+   - Kubernetes orchestriert die Bereitstellung auf eigenen Servern  
+
+3️⃣ **Skalierung & Monitoring**  
+   - Kubernetes passt die Anzahl der Instanzen automatisch an  
+   - **Eigener Load Balancer verteilt den Traffic**  
+
+**Vorteile:**  
+✅ **Volle Kontrolle über Infrastruktur & Datenschutz**  
+✅ **Keine Abhängigkeit von externen Cloud-Anbietern**  
+✅ **Optimierte Performance & Skalierbarkeit**  
 
 ---
 
@@ -89,35 +97,51 @@ Smolitux Academy unterstützt **zwei Zahlungsarten**:
 
 ---
 
-## **📁 Self-Hosting als Zusatzfeature**
-Obwohl Smolitux Academy **zentral von EcoSphereNetwork** gehostet wird, können Nutzer auf Wunsch **eigene Instanzen betreiben**.
+## **🚀 Deployment für Self-Hosting (Nur für fortgeschrittene Nutzer)**
 
-### **🔹 Self-Hosting mit Docker**
-- **Docker-Compose Setup für lokale Instanzen**  
-- **Optionale Anbindung an zentrale Smolitux Academy API**  
-- **Unterstützung für Raspberry Pi / MoodleBox für Offline-Nutzung**  
+Falls du Smolitux Academy auf deiner eigenen Infrastruktur hosten möchtest, folge dieser Anleitung:
 
-**Installation:**
-```bash
-git clone https://github.com/EcoSphereNetwork/Smolitux-Academy.git
-cd Smolitux-Academy
-docker-compose up -d
-```
+### **🔹 Voraussetzungen**
+- Docker & Docker-Compose  
+- PostgreSQL oder SQLite (für Datenbank)  
+- IPFS (optional für dezentrale Speicherung)  
+
+### **🔹 Installation**
+1. **Repository klonen:**
+   ```bash
+   git clone https://github.com/EcoSphereNetwork/Smolitux-Academy.git
+   cd Smolitux-Academy
+   ```
+
+2. **Docker-Umgebung starten:**
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Datenbank konfigurieren:**  
+   Bearbeite die `.env`-Datei, um PostgreSQL oder SQLite zu nutzen.
+
+4. **Zugriff auf die lokale Instanz:**  
+   - Öffne `http://localhost:8080` im Browser  
+   - Logge dich mit dem Standard-Admin-Account ein  
+
+📌 **Weitere Self-Hosting-Details:** 👉 [Self-Hosting-Optionen](https://github.com/EcoSphereNetwork/Smolitux-Academy/blob/main/dezentrale-Hosting-Optionen.md)  
 
 ---
 
-## **🚀 Nächste Schritte**
-✅ **Cloud-Infrastruktur aufsetzen (AWS/GCP/Kubernetes)**  
-✅ **Backend & Datenbank in Cloud migrieren**  
-✅ **Web3-Wallet-Login & Zahlungssystem implementieren**  
-✅ **NFT-Zertifikatsystem deployen**  
-✅ **Load Balancer & CDN für weltweite Verfügbarkeit einrichten**  
+## **🔮 Fazit, Vorteile & Empfehlung**
 
----
-
-## **🔮 Fazit & Vorteile**
 ✅ **Hauptplattform wird zentral von EcoSphereNetwork verwaltet (ähnlich Udemy)**  
 ✅ **Skalierbare Architektur für Tausende Nutzer weltweit**  
 ✅ **Hybrid-Modell mit dezentralen Zahlungsoptionen (Web3, NFTs)**  
 ✅ **Zusätzliche Self-Hosting-Option für spezielle Anwendungsfälle**  
+✅ **Nutze die offizielle Plattform, gehostet von EcoSphereNetwork, um Smolitux Academy sofort zu verwenden.**  
+✅ **Self-Hosting ist nur für spezialisierte Nutzer gedacht – Standard-Nutzer brauchen dies nicht!**  
 
+📌 **Zentrale Plattform:**  
+🌎 **[https://academy.ecospherelabs.com](https://academy.ecospherelabs.com)**  
+
+📌 **Fragen oder Unterstützung?**  
+💬 **[Support & Diskussionen](https://github.com/EcoSphereNetwork/Smolitux-Academy/discussions)**  
+
+---
